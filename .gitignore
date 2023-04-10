@@ -17,3 +17,6 @@ local.properties
 # Project exclude paths
 /app/
 /gradle/
+
+# Firebase
+google-services.json
