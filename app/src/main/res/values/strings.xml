@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PawPal</string>
+    <string name="bottom_nav_bar_home">Home</string>
+    <string name="bottom_nav_bar_post">Post</string>
+    <string name="bottom_nav_bar_nearby">Find</string>
+    <string name="bottom_nav_bar_inbox">Inbox</string>
+    <string name="bottom_nav_bar_profile">Profile</string>
 </resources>
