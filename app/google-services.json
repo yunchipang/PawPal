@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "318415651055",
+    "project_id": "pawpal-383322",
+    "storage_bucket": "pawpal-383322.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318415651055:android:4a1e0eed448e0528491b1a",
+        "android_client_info": {
+          "package_name": "edu.northeastern.pawpal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318415651055-5eojd71fj33u0pt3pr7lqtd6kd3k9m10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLfF0c6pFOHl_GxfUT34-TfcwABpoSNMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318415651055-5eojd71fj33u0pt3pr7lqtd6kd3k9m10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

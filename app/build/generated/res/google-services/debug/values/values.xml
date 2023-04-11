@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">318415651055-5eojd71fj33u0pt3pr7lqtd6kd3k9m10.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">318415651055</string>
+    <string name="google_api_key" translatable="false">AIzaSyDLfF0c6pFOHl_GxfUT34-TfcwABpoSNMg</string>
+    <string name="google_app_id" translatable="false">1:318415651055:android:4a1e0eed448e0528491b1a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDLfF0c6pFOHl_GxfUT34-TfcwABpoSNMg</string>
+    <string name="google_storage_bucket" translatable="false">pawpal-383322.appspot.com</string>
+    <string name="project_id" translatable="false">pawpal-383322</string>
+</resources>

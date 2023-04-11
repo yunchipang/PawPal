@@ -1,0 +1,411 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+MERGED from [com.google.android.material:material:1.8.0] /Users/yunchipang/.gradle/caches/transforms-3/75a1c0f2b09d2197eac62fde5ddc8cbd/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yunchipang/.gradle/caches/transforms-3/2777327c70e4f870482006048d22030c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yunchipang/.gradle/caches/transforms-3/0c66717593e48f1c486427ad9a0bb223/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yunchipang/.gradle/caches/transforms-3/5815f17bf5b82e8ee5346a6b6869f837/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:17:1-73:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yunchipang/.gradle/caches/transforms-3/8d207b9df14e34646cc0630ac8f9cabf/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:15:1-39:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/4e7c85644e71739fb01d876360f654a1/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/yunchipang/.gradle/caches/transforms-3/e1a3fa18dc63301a312f36d1e3c703d0/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5bb89714b1048c692a04d7d02f69a4ad/transformed/play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yunchipang/.gradle/caches/transforms-3/6117f2fe89236c36c022b90b3865aa4b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/yunchipang/.gradle/caches/transforms-3/70a46e08f26eda2935e3134300925536/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] /Users/yunchipang/.gradle/caches/transforms-3/4a1200b74ec5664f01a3bd0edec7fbd1/transformed/activity-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/303eb16cc9369309696373d1c64160a7/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/6421c30708a4f063ae438080d1431a58/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b59403fac015229d4f85b99e077c1096/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/cdff29822f3e33d3c4cff10972e1902f/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/b3a299574efd31b144ad761943e82fc7/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/096bf926e493b8120b51855cb4a50228/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/7b4228e8bc912a3914aa43e62098b0aa/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/yunchipang/.gradle/caches/transforms-3/93072b20f7d5369a8a2f81d57f08f704/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/1df5ab88393b6c0628b9d539e261ffd0/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/91e39d23244984d6f5e4d7768af89eac/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/49c441acf51bca3239ab80d2c51c387f/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/d313ddb90740d8abda1b3f2ec99d88e6/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/a5384cee19bec3a9ede41da8ede688b4/transformed/core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/720f30aca60faa6ef2ec77e53164b65f/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/09d1458b878d5da31eba48b7633b9744/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/ba70001769c93b0e878824e6cca48390/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/21cc2329c31b0c9ec75f6b15270c4ae1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/7c64d2850486e0b19cf723be75f3ec1f/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/f6330ad9024c654d6f968a9bfd197881/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5ab704b9f30b4bd756acf898afd9cbf1/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/c31454eb6f4871731a37f178d1861e0e/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/f254e3de7539a69b8a3df1a40f55b03e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/3935ae4fbf2513057b7ba3c845f51af9/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/45e24c3f7daf21444aa0c443517e98e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yunchipang/.gradle/caches/transforms-3/ef7061ee4601187fefd8b75751b64096/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/b03783187fce79d86a2da1efd818c645/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/yunchipang/.gradle/caches/transforms-3/c95e9a6cd576020ac695e5dcbb21ce51/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/47cdccf5a6115e0a44dae490b1ff691f/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/fbd9face91aa7746c90f80dccc9ea46c/transformed/firebase-components-17.1.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5042e79dd2f649a122424784921eb606/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/d02ab377427a724d42d14f5fbf6daaeb/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yunchipang/.gradle/caches/transforms-3/44fb1c653c2c68d50a0ce37637582265/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+	package
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:5:5-29:19
+MERGED from [com.google.android.material:material:1.8.0] /Users/yunchipang/.gradle/caches/transforms-3/75a1c0f2b09d2197eac62fde5ddc8cbd/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.8.0] /Users/yunchipang/.gradle/caches/transforms-3/75a1c0f2b09d2197eac62fde5ddc8cbd/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yunchipang/.gradle/caches/transforms-3/2777327c70e4f870482006048d22030c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yunchipang/.gradle/caches/transforms-3/2777327c70e4f870482006048d22030c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:26:5-71:19
+MERGED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:26:5-71:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yunchipang/.gradle/caches/transforms-3/8d207b9df14e34646cc0630ac8f9cabf/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yunchipang/.gradle/caches/transforms-3/8d207b9df14e34646cc0630ac8f9cabf/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5bb89714b1048c692a04d7d02f69a4ad/transformed/play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5bb89714b1048c692a04d7d02f69a4ad/transformed/play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yunchipang/.gradle/caches/transforms-3/6117f2fe89236c36c022b90b3865aa4b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yunchipang/.gradle/caches/transforms-3/6117f2fe89236c36c022b90b3865aa4b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/f254e3de7539a69b8a3df1a40f55b03e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/f254e3de7539a69b8a3df1a40f55b03e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/45e24c3f7daf21444aa0c443517e98e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/45e24c3f7daf21444aa0c443517e98e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:10:9-41
+	android:fullBackupContent
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:8:9-54
+	tools:targetApi
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:13:9-29
+	android:icon
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:12:9-44
+	android:dataExtractionRules
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:7:9-65
+activity#edu.northeastern.pawpal.RegistrationActivity
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:14:9-16:40
+	android:exported
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:16:13-37
+	android:name
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:15:13-49
+activity#edu.northeastern.pawpal.LoginActivity
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:17:9-19:40
+	android:exported
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:18:13-42
+activity#edu.northeastern.pawpal.MainActivity
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:20:9-28:20
+	android:exported
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:22:13-36
+	android:name
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml:26:27-74
+uses-sdk
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.8.0] /Users/yunchipang/.gradle/caches/transforms-3/75a1c0f2b09d2197eac62fde5ddc8cbd/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] /Users/yunchipang/.gradle/caches/transforms-3/75a1c0f2b09d2197eac62fde5ddc8cbd/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yunchipang/.gradle/caches/transforms-3/2777327c70e4f870482006048d22030c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/yunchipang/.gradle/caches/transforms-3/2777327c70e4f870482006048d22030c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yunchipang/.gradle/caches/transforms-3/0c66717593e48f1c486427ad9a0bb223/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yunchipang/.gradle/caches/transforms-3/0c66717593e48f1c486427ad9a0bb223/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yunchipang/.gradle/caches/transforms-3/5815f17bf5b82e8ee5346a6b6869f837/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yunchipang/.gradle/caches/transforms-3/5815f17bf5b82e8ee5346a6b6869f837/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yunchipang/.gradle/caches/transforms-3/8d207b9df14e34646cc0630ac8f9cabf/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yunchipang/.gradle/caches/transforms-3/8d207b9df14e34646cc0630ac8f9cabf/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/4e7c85644e71739fb01d876360f654a1/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/4e7c85644e71739fb01d876360f654a1/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/yunchipang/.gradle/caches/transforms-3/e1a3fa18dc63301a312f36d1e3c703d0/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/yunchipang/.gradle/caches/transforms-3/e1a3fa18dc63301a312f36d1e3c703d0/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5bb89714b1048c692a04d7d02f69a4ad/transformed/play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5bb89714b1048c692a04d7d02f69a4ad/transformed/play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yunchipang/.gradle/caches/transforms-3/6117f2fe89236c36c022b90b3865aa4b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yunchipang/.gradle/caches/transforms-3/6117f2fe89236c36c022b90b3865aa4b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/yunchipang/.gradle/caches/transforms-3/70a46e08f26eda2935e3134300925536/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/yunchipang/.gradle/caches/transforms-3/70a46e08f26eda2935e3134300925536/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] /Users/yunchipang/.gradle/caches/transforms-3/4a1200b74ec5664f01a3bd0edec7fbd1/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /Users/yunchipang/.gradle/caches/transforms-3/4a1200b74ec5664f01a3bd0edec7fbd1/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/303eb16cc9369309696373d1c64160a7/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/303eb16cc9369309696373d1c64160a7/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/6421c30708a4f063ae438080d1431a58/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/6421c30708a4f063ae438080d1431a58/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b59403fac015229d4f85b99e077c1096/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b59403fac015229d4f85b99e077c1096/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/cdff29822f3e33d3c4cff10972e1902f/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/cdff29822f3e33d3c4cff10972e1902f/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/b3a299574efd31b144ad761943e82fc7/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/b3a299574efd31b144ad761943e82fc7/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/096bf926e493b8120b51855cb4a50228/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/096bf926e493b8120b51855cb4a50228/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/7b4228e8bc912a3914aa43e62098b0aa/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/7b4228e8bc912a3914aa43e62098b0aa/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/yunchipang/.gradle/caches/transforms-3/93072b20f7d5369a8a2f81d57f08f704/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/yunchipang/.gradle/caches/transforms-3/93072b20f7d5369a8a2f81d57f08f704/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/1df5ab88393b6c0628b9d539e261ffd0/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/1df5ab88393b6c0628b9d539e261ffd0/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/91e39d23244984d6f5e4d7768af89eac/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/91e39d23244984d6f5e4d7768af89eac/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/49c441acf51bca3239ab80d2c51c387f/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/49c441acf51bca3239ab80d2c51c387f/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/d313ddb90740d8abda1b3f2ec99d88e6/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/d313ddb90740d8abda1b3f2ec99d88e6/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/a5384cee19bec3a9ede41da8ede688b4/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/a5384cee19bec3a9ede41da8ede688b4/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/720f30aca60faa6ef2ec77e53164b65f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/720f30aca60faa6ef2ec77e53164b65f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/09d1458b878d5da31eba48b7633b9744/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/09d1458b878d5da31eba48b7633b9744/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/ba70001769c93b0e878824e6cca48390/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/yunchipang/.gradle/caches/transforms-3/ba70001769c93b0e878824e6cca48390/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/21cc2329c31b0c9ec75f6b15270c4ae1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/21cc2329c31b0c9ec75f6b15270c4ae1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/7c64d2850486e0b19cf723be75f3ec1f/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/7c64d2850486e0b19cf723be75f3ec1f/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/f6330ad9024c654d6f968a9bfd197881/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/f6330ad9024c654d6f968a9bfd197881/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5ab704b9f30b4bd756acf898afd9cbf1/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5ab704b9f30b4bd756acf898afd9cbf1/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/c31454eb6f4871731a37f178d1861e0e/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/c31454eb6f4871731a37f178d1861e0e/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/f254e3de7539a69b8a3df1a40f55b03e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/f254e3de7539a69b8a3df1a40f55b03e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/3935ae4fbf2513057b7ba3c845f51af9/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/3935ae4fbf2513057b7ba3c845f51af9/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/45e24c3f7daf21444aa0c443517e98e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/45e24c3f7daf21444aa0c443517e98e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yunchipang/.gradle/caches/transforms-3/ef7061ee4601187fefd8b75751b64096/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yunchipang/.gradle/caches/transforms-3/ef7061ee4601187fefd8b75751b64096/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/b03783187fce79d86a2da1efd818c645/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/yunchipang/.gradle/caches/transforms-3/b03783187fce79d86a2da1efd818c645/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/yunchipang/.gradle/caches/transforms-3/c95e9a6cd576020ac695e5dcbb21ce51/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/yunchipang/.gradle/caches/transforms-3/c95e9a6cd576020ac695e5dcbb21ce51/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/47cdccf5a6115e0a44dae490b1ff691f/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/47cdccf5a6115e0a44dae490b1ff691f/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/fbd9face91aa7746c90f80dccc9ea46c/transformed/firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/fbd9face91aa7746c90f80dccc9ea46c/transformed/firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5042e79dd2f649a122424784921eb606/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/5042e79dd2f649a122424784921eb606/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/d02ab377427a724d42d14f5fbf6daaeb/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/yunchipang/.gradle/caches/transforms-3/d02ab377427a724d42d14f5fbf6daaeb/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yunchipang/.gradle/caches/transforms-3/44fb1c653c2c68d50a0ce37637582265/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/yunchipang/.gradle/caches/transforms-3/44fb1c653c2c68d50a0ce37637582265/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yunchipang/AndroidStudioProjects/PawPal/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:23:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:24:22-76
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:27:9-44:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:29:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:31:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:30:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:32:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:28:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:33:13-43:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:34:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:36:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:36:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:37:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:37:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:39:17-42:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:41:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:40:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:42:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:45:9-62:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:47:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:49:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:48:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:50:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:46:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:51:13-61:29
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:64:9-70:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:66:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:65:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:67:13-69:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:69:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] /Users/yunchipang/.gradle/caches/transforms-3/b4a66383e124c4c67e23ba549d4382ff/transformed/firebase-auth-21.1.0/AndroidManifest.xml:68:17-109
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/yunchipang/.gradle/caches/transforms-3/9d36afbc47413410132b9745cffb91fe/transformed/firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/yunchipang/.gradle/caches/transforms-3/f632709f9ada0248f7ce54974fc583a4/transformed/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/yunchipang/.gradle/caches/transforms-3/3ed17915a2e744c2bbbfb52330773cf5/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/f254e3de7539a69b8a3df1a40f55b03e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yunchipang/.gradle/caches/transforms-3/f254e3de7539a69b8a3df1a40f55b03e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/yunchipang/.gradle/caches/transforms-3/ac0fb3956709d2347e7c19d6d7a40626/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#edu.northeastern.pawpal.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#edu.northeastern.pawpal.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/yunchipang/.gradle/caches/transforms-3/46580efff2520e68c7940204055d2c0f/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/yunchipang/.gradle/caches/transforms-3/a7afaacbc7177510ad6c44aabd6a8811/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
