@@ -21,10 +21,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.os.Handler;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+
+import edu.northeastern.pawpal.GooglePlacesAPIUtils;
 
 
 public class NearbyActivity extends AppCompatActivity implements
@@ -36,18 +44,15 @@ public class NearbyActivity extends AppCompatActivity implements
     private GoogleMap map;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean permissionDenied = false;
-    private FusedLocationProviderClient fusedLocationProviderClient;
     private Location mLastLocation;
-    private String mLatitude;
-    private String mLongitude;
-    private AutoCompleteTextView autoCompleteTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nearby);
 
-        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
         String[] places = getResources().getStringArray(R.array.places_menu_items);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.places_dropdown_item, places);
         autoCompleteTextView.setAdapter(arrayAdapter);
@@ -57,14 +62,17 @@ public class NearbyActivity extends AppCompatActivity implements
 
             // TODO: send request to google places API
             String type = "veterinary_care";
-            StringBuilder requestURLBuilder = new StringBuilder(getString(R.string.google_places_api_base_url));
-            requestURLBuilder.append("location=").append(mLatitude);
-            requestURLBuilder.append("%2C").append(mLongitude);
-            requestURLBuilder.append("&radius").append(1500);
-            requestURLBuilder.append("&type=").append(type);
-            requestURLBuilder.append("&key=").append(MAPS_API_KEY);
-            String requestURL = requestURLBuilder.toString();
-            Log.d("requestURL", requestURL);
+
+            GooglePlacesAPIUtils gUtils = new GooglePlacesAPIUtils();
+            URL requestURL = null;
+            try {
+                requestURL = gUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, type);
+            } catch (MalformedURLException e) {
+                throw new RuntimeException(e);
+            }
+            String res = gUtils.fetchData(requestURL);
+            List<HashMap<String, String>> nearbyPlaceList = gUtils.parseData(res);
+            // to be continued
 
         });
 
@@ -86,13 +94,13 @@ public class NearbyActivity extends AppCompatActivity implements
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
         }
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fusedLocationProviderClient.getLastLocation().addOnSuccessListener(location -> {
             if (location != null) {
                 mLastLocation = location;
                 // assign latitude and longitude
-                mLatitude = String.valueOf(location.getLatitude());
-                mLongitude = String.valueOf(location.getLongitude());
+//                mLatitude = String.valueOf(location.getLatitude());
+//                mLongitude = String.valueOf(location.getLongitude());
             }
         });
     }
