@@ -15,4 +15,15 @@
 
     <!--    Location    -->
     <string name="my_location_button_clicked_msg">"Navigated to your current location!"</string>
+
+    <!--    Places    -->
+    <string name="places_select">Select</string>
+    <string-array name="places_menu_items">
+        <item>Pet Store</item>
+        <item>Vet</item>
+        <item>Dog park</item>
+        <item>Restaurant</item>
+        <item>Salon</item>
+    </string-array>
+
 </resources>

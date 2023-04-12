@@ -5,6 +5,7 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.material.textfield.TextInputLayout;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -16,7 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.text.InputType;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
 public class NearbyActivity extends AppCompatActivity implements
@@ -39,11 +43,18 @@ public class NearbyActivity extends AppCompatActivity implements
      * #onRequestPermissionsResult(int, String[], int[])}.
      */
     private boolean permissionDenied = false;
+    private AutoCompleteTextView autoCompleteTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nearby);
+
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+
+        String[] places = getResources().getStringArray(R.array.places_menu_items);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.places_dropdown_item, places);
+        autoCompleteTextView.setAdapter(arrayAdapter);
 
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
