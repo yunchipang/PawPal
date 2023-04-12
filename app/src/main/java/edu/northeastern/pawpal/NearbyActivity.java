@@ -1,11 +1,15 @@
 package edu.northeastern.pawpal;
 
+import static edu.northeastern.pawpal.BuildConfig.MAPS_API_KEY;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -17,11 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import android.text.InputType;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
+
 
 public class NearbyActivity extends AppCompatActivity implements
         OnMapReadyCallback,
@@ -30,19 +34,12 @@ public class NearbyActivity extends AppCompatActivity implements
         ActivityCompat.OnRequestPermissionsResultCallback {
 
     private GoogleMap map;
-
-    /**
-     * Request code for location permission request.
-     *
-     * @see #onRequestPermissionsResult(int, String[], int[])
-     */
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
-
-    /**
-     * Flag indicating whether a requested permission has been denied after returning in {@link
-     * #onRequestPermissionsResult(int, String[], int[])}.
-     */
     private boolean permissionDenied = false;
+    private FusedLocationProviderClient fusedLocationProviderClient;
+    private Location mLastLocation;
+    private String mLatitude;
+    private String mLongitude;
     private AutoCompleteTextView autoCompleteTextView;
 
     @Override
@@ -51,10 +48,25 @@ public class NearbyActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_nearby);
 
         autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
-
         String[] places = getResources().getStringArray(R.array.places_menu_items);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.places_dropdown_item, places);
         autoCompleteTextView.setAdapter(arrayAdapter);
+
+        autoCompleteTextView.setOnItemClickListener((parent, view, position, id) -> {
+            String selectedItem = (String) parent.getItemAtPosition(position);
+
+            // TODO: send request to google places API
+            String type = "veterinary_care";
+            StringBuilder requestURLBuilder = new StringBuilder(getString(R.string.google_places_api_base_url));
+            requestURLBuilder.append("location=").append(mLatitude);
+            requestURLBuilder.append("%2C").append(mLongitude);
+            requestURLBuilder.append("&radius").append(1500);
+            requestURLBuilder.append("&type=").append(type);
+            requestURLBuilder.append("&key=").append(MAPS_API_KEY);
+            String requestURL = requestURLBuilder.toString();
+            Log.d("requestURL", requestURL);
+
+        });
 
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -70,6 +82,21 @@ public class NearbyActivity extends AppCompatActivity implements
         enableMyLocation();
     }
 
+    private void getLocation() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
+        }
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        fusedLocationProviderClient.getLastLocation().addOnSuccessListener(location -> {
+            if (location != null) {
+                mLastLocation = location;
+                // assign latitude and longitude
+                mLatitude = String.valueOf(location.getLatitude());
+                mLongitude = String.valueOf(location.getLongitude());
+            }
+        });
+    }
+
     /**
      * Enables the My Location layer if the fine location permission has been granted.
      */
@@ -79,6 +106,7 @@ public class NearbyActivity extends AppCompatActivity implements
                 == PackageManager.PERMISSION_GRANTED) {
             if (map != null) {
                 map.setMyLocationEnabled(true);
+                getLocation();
             }
         } else {
             // Permission to access the location is missing. Show rationale and request permission
@@ -111,8 +139,7 @@ public class NearbyActivity extends AppCompatActivity implements
             return;
         }
 
-        if (PermissionUtils.isPermissionGranted(permissions, grantResults,
-                Manifest.permission.ACCESS_FINE_LOCATION)) {
+        if (PermissionUtils.isPermissionGranted(permissions, grantResults, Manifest.permission.ACCESS_FINE_LOCATION)) {
             // Enable the my location layer if the permission has been granted.
             enableMyLocation();
         } else {
