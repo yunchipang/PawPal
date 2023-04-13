@@ -9,11 +9,14 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -41,7 +44,8 @@ public class NearbyActivity extends AppCompatActivity implements
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean permissionDenied = false;
     private Location mLastLocation;
-    private GooglePlacesUtils gUtils;
+    private GooglePlacesUtils gpUtils;
+    private GoogleMapsUtils gmUtils;
 
 
     @Override
@@ -57,23 +61,36 @@ public class NearbyActivity extends AppCompatActivity implements
         autoCompleteTextView.setOnItemClickListener((parent, view, position, id) -> {
             String selectedItem = (String) parent.getItemAtPosition(position);
 
+            // init utils
+            gpUtils = new GooglePlacesUtils();
+            gmUtils = new GoogleMapsUtils();
+
+            // request Google Places API
             String type = "veterinary_care"; // TODO: map menu item to type/keywords
             // TODO: delete hardcoded type
-
-            gUtils = new GooglePlacesUtils();
             URL requestURL;
             try {
-                requestURL = gUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, type);
+                requestURL = gpUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, type);
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }
-            String res = gUtils.fetchData(requestURL);
-            List<HashMap<String, String>> nearbyPlaceList = gUtils.parseData(res);
+            String res = gpUtils.fetchData(requestURL);
+            List<HashMap<String, String>> nearbyPlaceList = gpUtils.parseData(res);
 
             // display places in nearbyPlaceList on screen by marker
             for (int i=0; i<nearbyPlaceList.size(); i++) {
-                LatLng latLng = new LatLng(Double.parseDouble((nearbyPlaceList.get(i).get("lat"))), Double.parseDouble(nearbyPlaceList.get(i).get("lng")));
-                map.addMarker(new MarkerOptions().position(latLng).title(nearbyPlaceList.get(i).get("place_name")));
+                HashMap<String, String> place = nearbyPlaceList.get(i);
+                // calculate and add distance into place item
+                double currentLat = mLastLocation.getLatitude();
+                double currentLng = mLastLocation.getLongitude();
+                double placeLat = Double.parseDouble(place.get("lat"));
+                double placeLng = Double.parseDouble(place.get("lng"));
+                place.put("distance", gmUtils.getDistanceInMiles(currentLat, currentLng, placeLat, placeLng));
+                LatLng latLng = new LatLng(placeLat, placeLng);
+                map.addMarker(new MarkerOptions()
+                        .position(latLng)
+                        .title(place.get("place_name"))
+                        .snippet(place.get("distance")+" mi"));
                 if (i==0) {
                     map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
                 }
@@ -93,6 +110,25 @@ public class NearbyActivity extends AppCompatActivity implements
         map.setOnMyLocationButtonClickListener(this);
         map.setOnMyLocationClickListener(this);
         enableMyLocation();
+
+        // set info window click listener for the map
+        map.setOnInfoWindowClickListener(marker -> {
+            // Get the latitude and longitude of the clicked marker
+            LatLng position = marker.getPosition();
+            String title = marker.getTitle();
+            double lat = position.latitude;
+            double lng = position.longitude;
+
+            // Create an intent to launch Google Maps
+            Uri gmmIntentUri = Uri.parse("geo:" + lat + "," + lng + "?q=" + title);
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps");
+
+            // Verify that the intent will resolve to an activity
+            if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                startActivity(mapIntent);
+            }
+        });
     }
 
     private void getLocation() {
@@ -119,8 +155,6 @@ public class NearbyActivity extends AppCompatActivity implements
             if (map != null) {
                 map.setMyLocationEnabled(true);
                 getLocation(); // get user's current location
-//                LatLng latLng = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-//                map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15)); // move camera to user's current location
             }
         } else {
             // Permission to access the location is missing. Show rationale and request permission
