@@ -4,11 +4,13 @@ import static edu.northeastern.pawpal.BuildConfig.MAPS_API_KEY;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import android.Manifest;
@@ -98,9 +100,8 @@ public class NearbyActivity extends AppCompatActivity implements
         fusedLocationProviderClient.getLastLocation().addOnSuccessListener(location -> {
             if (location != null) {
                 mLastLocation = location;
-                // assign latitude and longitude
-//                mLatitude = String.valueOf(location.getLatitude());
-//                mLongitude = String.valueOf(location.getLongitude());
+                LatLng latLng = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15)); // move camera to user's current location
             }
         });
     }
@@ -114,7 +115,9 @@ public class NearbyActivity extends AppCompatActivity implements
                 == PackageManager.PERMISSION_GRANTED) {
             if (map != null) {
                 map.setMyLocationEnabled(true);
-                getLocation();
+                getLocation(); // get user's current location
+//                LatLng latLng = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+//                map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15)); // move camera to user's current location
             }
         } else {
             // Permission to access the location is missing. Show rationale and request permission
