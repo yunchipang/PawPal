@@ -4,7 +4,6 @@ import static edu.northeastern.pawpal.BuildConfig.MAPS_API_KEY;
 
 import android.location.Location;
 import android.os.Handler;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,11 +15,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import edu.northeastern.pawpal.APIThread;
+public class GooglePlacesUtils {
 
-public class GooglePlacesAPIUtils {
-
-    // TODO: add all required functions
     public URL buildURL(String baseURLStr, Location location, String type) throws MalformedURLException {
         String locationStr = "location=" + location.getLatitude() + "%2C" + location.getLongitude();
         String radiusStr = "&radius=5000";
@@ -30,8 +26,6 @@ public class GooglePlacesAPIUtils {
         return new URL(urlString);
     }
 
-    // fetchData
-    // need to import APIThread
     public String fetchData(URL requestURL) {
 
         Handler responseHandler = new Handler();
@@ -48,15 +42,14 @@ public class GooglePlacesAPIUtils {
         return response;
     }
 
-    // helper functions to parseData
     private HashMap<String, String> getPlace(JSONObject googlePlaceJson)
     {
         HashMap<String, String> googlePlaceMap = new HashMap<>();
         String placeName = "--NA--";
-        String vicinity= "--NA--";
-//        String latitude= "";
-//        String longitude="";
-//        String reference="";
+        String vicinity = "--NA--";
+        String latitude = "";
+        String longitude = "";
+        String place_id = "";
 
         try {
             if (!googlePlaceJson.isNull("name")) {
@@ -65,16 +58,15 @@ public class GooglePlacesAPIUtils {
             if (!googlePlaceJson.isNull("vicinity")) {
                 vicinity = googlePlaceJson.getString("vicinity");
             }
-
-//            latitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lat");
-//            longitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lng");
-//            reference = googlePlaceJson.getString("reference");
+            latitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lat");
+            longitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lng");
+            place_id = googlePlaceJson.getString("place_id");
 
             googlePlaceMap.put("place_name", placeName);
             googlePlaceMap.put("vicinity", vicinity);
-//            googlePlaceMap.put("lat", latitude);
-//            googlePlaceMap.put("lng", longitude);
-//            googlePlaceMap.put("reference", reference);
+            googlePlaceMap.put("lat", latitude);
+            googlePlaceMap.put("lng", longitude);
+            googlePlaceMap.put("place_id", place_id);
         }
         catch (JSONException e) {
             e.printStackTrace();

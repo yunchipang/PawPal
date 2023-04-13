@@ -1,7 +1,5 @@
 package edu.northeastern.pawpal;
 
-import static edu.northeastern.pawpal.BuildConfig.MAPS_API_KEY;
-
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -11,7 +9,7 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -23,7 +21,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import android.os.Handler;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -33,9 +30,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
-
-import edu.northeastern.pawpal.GooglePlacesAPIUtils;
-
 
 public class NearbyActivity extends AppCompatActivity implements
         OnMapReadyCallback,
@@ -47,6 +41,7 @@ public class NearbyActivity extends AppCompatActivity implements
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean permissionDenied = false;
     private Location mLastLocation;
+    private GooglePlacesUtils gUtils;
 
 
     @Override
@@ -62,11 +57,11 @@ public class NearbyActivity extends AppCompatActivity implements
         autoCompleteTextView.setOnItemClickListener((parent, view, position, id) -> {
             String selectedItem = (String) parent.getItemAtPosition(position);
 
-            // TODO: send request to google places API
-            String type = "veterinary_care";
+            String type = "veterinary_care"; // TODO: map menu item to type/keywords
+            // TODO: delete hardcoded type
 
-            GooglePlacesAPIUtils gUtils = new GooglePlacesAPIUtils();
-            URL requestURL = null;
+            gUtils = new GooglePlacesUtils();
+            URL requestURL;
             try {
                 requestURL = gUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, type);
             } catch (MalformedURLException e) {
@@ -74,7 +69,15 @@ public class NearbyActivity extends AppCompatActivity implements
             }
             String res = gUtils.fetchData(requestURL);
             List<HashMap<String, String>> nearbyPlaceList = gUtils.parseData(res);
-            // to be continued
+
+            // display places in nearbyPlaceList on screen by marker
+            for (int i=0; i<nearbyPlaceList.size(); i++) {
+                LatLng latLng = new LatLng(Double.parseDouble((nearbyPlaceList.get(i).get("lat"))), Double.parseDouble(nearbyPlaceList.get(i).get("lng")));
+                map.addMarker(new MarkerOptions().position(latLng).title(nearbyPlaceList.get(i).get("place_name")));
+                if (i==0) {
+                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
+                }
+            }
 
         });
 
