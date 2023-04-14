@@ -1,10 +1,35 @@
 <resources>
     <string name="app_name">PawPal</string>
+
+    <!--    Bottom Navigation    -->
     <string name="bottom_nav_bar_home">Home</string>
     <string name="bottom_nav_bar_post">Post</string>
-    <string name="bottom_nav_bar_nearby">Find</string>
+    <string name="bottom_nav_bar_nearby">Nearby</string>
     <string name="bottom_nav_bar_inbox">Inbox</string>
     <string name="bottom_nav_bar_profile">Profile</string>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'nearby\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'nearby\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this feature.</string>
+
+    <!--    Location    -->
+    <string name="my_location_button_clicked_msg">Moved to your current location</string>
+
+    <!--    Places    -->
+    <string name="places_select">Select</string>
+    <string-array name="places_menu_items">
+        <item>Pet store</item>
+        <item>Veterinary care</item>
+        <item>Dog park</item>
+        <item>Pet Grooming</item>
+        <item>Pet-friendly cafe</item>
+    </string-array>
+
+    <!--    Google Places API   -->
+    <string name="google_places_api_base_url">https://maps.googleapis.com/maps/api/place/nearbysearch/json?</string>
+    
+    <!--    Sign up   -->
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -14,4 +39,5 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    
 </resources>
