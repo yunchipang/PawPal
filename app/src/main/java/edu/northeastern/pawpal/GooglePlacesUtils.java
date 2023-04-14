@@ -17,10 +17,10 @@ import java.util.List;
 
 public class GooglePlacesUtils {
 
-    public URL buildURL(String baseURLStr, Location location, String type) throws MalformedURLException {
+    public URL buildURL(String baseURLStr, Location location, String keyword) throws MalformedURLException {
         String locationStr = "location=" + location.getLatitude() + "%2C" + location.getLongitude();
         String radiusStr = "&radius=5000";
-        String typeStr = "&type=" + type;
+        String typeStr = "&keyword=" + keyword;
         String keyStr = "&key="+ MAPS_API_KEY;
         String urlString = baseURLStr + locationStr + radiusStr + typeStr + keyStr;
         return new URL(urlString);

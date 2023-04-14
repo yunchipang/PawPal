@@ -22,8 +22,8 @@
         <item>Pet store</item>
         <item>Veterinary care</item>
         <item>Dog park</item>
-        <item>Pet-friendly restaurant</item>
-        <item>Pet salon</item>
+        <item>Pet Grooming</item>
+        <item>Pet-friendly cafe</item>
     </string-array>
 
     <!--    Google Places API   -->

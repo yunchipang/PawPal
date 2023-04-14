@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 
 public class GoogleMapsUtils {
-
+    
     public String getDistanceInMiles(double currentLat, double currentLng, double destLat, double destLng) {
         int earthRadius = 6371; // radius of the earth in km
         double dLat = Math.toRadians(destLat - currentLat);

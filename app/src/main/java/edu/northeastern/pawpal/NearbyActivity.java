@@ -66,11 +66,9 @@ public class NearbyActivity extends AppCompatActivity implements
             gmUtils = new GoogleMapsUtils();
 
             // request Google Places API
-            String type = "veterinary_care"; // TODO: map menu item to type/keywords
-            // TODO: delete hardcoded type
             URL requestURL;
             try {
-                requestURL = gpUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, type);
+                requestURL = gpUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, selectedItem);
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }
