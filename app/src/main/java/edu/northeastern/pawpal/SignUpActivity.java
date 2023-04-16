@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
     Button btn2_signup;
-    EditText user_name, pass_word;
+    EditText user_email, pass_word, user_name;
     FirebaseAuth mAuth;
     private FirebaseDatabase pawpalFB = FirebaseDatabase.getInstance();
     private DatabaseReference dbParent = pawpalFB.getReference();
@@ -29,25 +29,33 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        user_name=findViewById(R.id.sign_username);
+        user_email=findViewById(R.id.sign_username);
+        user_name=findViewById(R.id.sign_userid);
         pass_word=findViewById(R.id.sign_password);
         btn2_signup=findViewById(R.id.sign);
         mAuth=FirebaseAuth.getInstance();
         btn2_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = user_name.getText().toString().trim();
+                String email = user_email.getText().toString().trim();
                 String password= pass_word.getText().toString().trim();
+                String name = user_name.getText().toString().trim();
                 if(email.isEmpty())
                 {
-                    user_name.setError("Email is empty");
+                    user_email.setError("Email is empty");
+                    user_email.requestFocus();
+                    return;
+                }
+                if(name.isEmpty())
+                {
+                    user_name.setError("Username is empty");
                     user_name.requestFocus();
                     return;
                 }
                 if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
                 {
-                    user_name.setError("Enter the valid email address");
-                    user_name.requestFocus();
+                    user_email.setError("Enter the valid email address");
+                    user_email.requestFocus();
                     return;
                 }
                 if(password.isEmpty())
@@ -67,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull com.google.android.gms.tasks.Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            createNewUser(pawpalFB, email);
+                            createNewUser(pawpalFB, name);
 //                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
                             Toast.makeText(SignUpActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
                         }

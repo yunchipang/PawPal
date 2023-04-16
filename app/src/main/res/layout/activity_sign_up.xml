@@ -25,11 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
         android:layout_marginEnd="90dp"
+        android:layout_marginBottom="-20dp"
         android:ems="12"
-        android:hint="Username: "
+        android:hint="Email: "
         android:textSize="18dp"
         app:layout_constrainedWidth="true"
-        app:layout_constraintBottom_toTopOf="@+id/sign_password"
+        app:layout_constraintBottom_toTopOf="@+id/sign_userid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_username"></EditText>
+        app:layout_constraintTop_toBottomOf="@+id/sign_userid"></EditText>
+
+    <EditText
+        android:id="@+id/sign_userid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="90dp"
+        android:ems="12"
+        android:hint="Username: "
+        android:textSize="18dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/sign_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_username"
+        app:layout_constraintVertical_bias="0.871"></EditText>
 
     <Button
         android:id="@+id/sign"
