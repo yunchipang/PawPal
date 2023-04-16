@@ -17,16 +17,25 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 import bolts.Task;
 
 public class SignUpActivity extends AppCompatActivity {
     Button btn2_signup;
     EditText user_email, pass_word, user_name;
-    FirebaseAuth mAuth;
+    FirebaseAuth mAuth=FirebaseAuth.getInstance();;
     private FirebaseDatabase pawpalFB = FirebaseDatabase.getInstance();
     private DatabaseReference dbParent = pawpalFB.getReference();
     private DatabaseReference dbChild = dbParent.child("users");
     private SharedPreferences sharedPrefs;
+//    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference usersRef = pawpalFB.getReference("users");
+//    FirebaseAuth mAuth=FirebaseAuth.getInstance();
+    //get sign in user's uid
+    String uid = mAuth.getCurrentUser().getUid();
+    // 创建一个HashMap来存储用户信息
+    HashMap<String, String> userInfo = new HashMap<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
         user_name=findViewById(R.id.sign_userid);
         pass_word=findViewById(R.id.sign_password);
         btn2_signup=findViewById(R.id.sign);
-        mAuth=FirebaseAuth.getInstance();
+//        mAuth=FirebaseAuth.getInstance();
         btn2_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,9 +114,11 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
     private void createNewUser(FirebaseDatabase pawpalFB, String username) {
-        DatabaseReference newUserRoot = pawpalFB.getReference();
-        DatabaseReference newUserLeaf = newUserRoot.child("users").push();
-        newUserLeaf.setValue(username);
+        userInfo.put("Username", username);
+        usersRef.child(uid).setValue(userInfo);
+//        DatabaseReference newUserRoot = pawpalFB.getReference();
+//        DatabaseReference newUserLeaf = newUserRoot.child("users").push();
+//        newUserLeaf.setValue(username);
     }
 
 }
