@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_inbox:
                         return true; // TODO: navigate to Inbox
                     case R.id.navigation_profile:
-                        return true; // TODO: navigate to Profile
+                        Intent intentP = new Intent(MainActivity.this, ProfileActivity.class);
+                        startActivity(intentP);
+                        return true; // TODO: ZL-----navigate to Profile
                 }
                 return false;
             }

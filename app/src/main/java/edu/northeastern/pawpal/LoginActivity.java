@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -58,15 +59,18 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful())
                 {
                     //TODO: ADD USER TO DATABASE
-
-
+                    FirebaseUser user = mAuth.getCurrentUser();
+//                    Intent intent = new Intent(LoginActivity.this,
+//                            ProfileActivity.class);
+//                    intent.putExtra("username", user_name);
+//                    startActivity(intent);
                     startActivity(new Intent(this, MainActivity.class));
 
                 }
                 else
                 {
                     Toast.makeText(this,
-                            "Please Check Your login Credentials",
+                            "Please Check Your email and password.",
                             Toast.LENGTH_SHORT).show();
                 }
 
