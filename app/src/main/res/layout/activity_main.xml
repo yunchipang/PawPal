@@ -8,8 +8,8 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="413dp"
-        android:layout_height="545dp"
+        android:layout_width="409dp"
+        android:layout_height="652dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,15 +26,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewPager"
         app:menu="@menu/bottom_nav_menu" />
-
-    <Button
-        android:id="@+id/profile_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="profiletest"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="592dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

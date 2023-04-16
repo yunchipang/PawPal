@@ -36,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
     DatabaseReference usersRef = pawpalFB.getReference("users");
 //    FirebaseAuth mAuth=FirebaseAuth.getInstance();
     //get sign in user's uid
-    String uid = mAuth.getCurrentUser().getUid();
+
     // 创建一个HashMap来存储用户信息
     HashMap<String, String> userInfo = new HashMap<>();
     @Override
@@ -89,7 +89,15 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull com.google.android.gms.tasks.Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            createNewUser(pawpalFB, name);
+                            String uid = mAuth.getCurrentUser().getUid();
+//                            createNewUser(pawpalFB, name);
+                            userInfo.put("Username", name);
+                            userInfo.put("Gender", "");
+                            userInfo.put("Birthday", "");
+                            userInfo.put("Phone", "");
+                            userInfo.put("Breed", "");
+                            userInfo.put("Status", "");
+                            usersRef.child(uid).setValue(userInfo);
 //                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
                             Toast.makeText(SignUpActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
                         }
@@ -117,8 +125,13 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
     private void createNewUser(FirebaseDatabase pawpalFB, String username) {
-        userInfo.put("Username", username);
-        usersRef.child(uid).setValue(userInfo);
+//        userInfo.put("Username", username);
+//        userInfo.put("Gender", null);
+//        userInfo.put("Birthday", null);
+//        userInfo.put("Phone", null);
+//        userInfo.put("Breed", null);
+//        userInfo.put("Status", null);
+//        usersRef.child(uid).setValue(userInfo);
 //        DatabaseReference newUserRoot = pawpalFB.getReference();
 //        DatabaseReference newUserLeaf = newUserRoot.child("users").push();
 //        newUserLeaf.setValue(username);
