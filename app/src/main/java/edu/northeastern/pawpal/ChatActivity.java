@@ -98,11 +98,12 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     public void sendMessage(String text){
-        final String key = reference.child("Messages").child(userName).child(otherName).push().getKey();
-        final Map messageMap = new HashMap();
-        messageMap.put("text" , text);
-        messageMap.put("from" , userName);
         if (userName != null && otherName != null) {
+            final String key = reference.child("Messages").child(userName).child(otherName).push().getKey();
+            final Map messageMap = new HashMap();
+            messageMap.put("text" , text);
+            messageMap.put("from" , userName);
+
             reference.child("Messages").child(userName).child(otherName).child(key).setValue(messageMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
