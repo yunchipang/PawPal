@@ -1,4 +1,4 @@
-package edu.northeastern.pawpal;
+package edu.northeastern.pawpal.utils;
 
 // Copyright 2020 Google LLC
 //
@@ -25,6 +25,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.DialogFragment;
 import android.widget.Toast;
+
+import edu.northeastern.pawpal.R;
 
 /**
  * Utility class for access to runtime permissions.

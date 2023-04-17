@@ -9,7 +9,6 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.Manifest;
@@ -24,7 +23,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
@@ -33,6 +31,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
+
+import edu.northeastern.pawpal.utils.GoogleMapsUtils;
+import edu.northeastern.pawpal.utils.GooglePlacesUtils;
+import edu.northeastern.pawpal.utils.PermissionUtils;
 
 public class NearbyActivity extends AppCompatActivity implements
         OnMapReadyCallback,
@@ -61,19 +63,15 @@ public class NearbyActivity extends AppCompatActivity implements
         autoCompleteTextView.setOnItemClickListener((parent, view, position, id) -> {
             String selectedItem = (String) parent.getItemAtPosition(position);
 
-            // init utils
-            gpUtils = new GooglePlacesUtils();
-            gmUtils = new GoogleMapsUtils();
-
             // request Google Places API
             URL requestURL;
             try {
-                requestURL = gpUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, selectedItem);
+                requestURL = GooglePlacesUtils.buildURL(getString(R.string.google_places_api_base_url), mLastLocation, selectedItem);
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }
-            String res = gpUtils.fetchData(requestURL);
-            List<HashMap<String, String>> nearbyPlaceList = gpUtils.parseData(res);
+            String res = GooglePlacesUtils.fetchData(requestURL);
+            List<HashMap<String, String>> nearbyPlaceList = GooglePlacesUtils.parseData(res);
 
             // display places in nearbyPlaceList on screen by marker
             for (int i=0; i<nearbyPlaceList.size(); i++) {
@@ -83,7 +81,7 @@ public class NearbyActivity extends AppCompatActivity implements
                 double currentLng = mLastLocation.getLongitude();
                 double placeLat = Double.parseDouble(place.get("lat"));
                 double placeLng = Double.parseDouble(place.get("lng"));
-                place.put("distance", gmUtils.getDistanceInMiles(currentLat, currentLng, placeLat, placeLng));
+                place.put("distance", GoogleMapsUtils.getDistanceInMiles(currentLat, currentLng, placeLat, placeLng));
                 LatLng latLng = new LatLng(placeLat, placeLng);
                 map.addMarker(new MarkerOptions()
                         .position(latLng)

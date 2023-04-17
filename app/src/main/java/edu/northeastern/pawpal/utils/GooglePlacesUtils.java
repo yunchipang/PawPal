@@ -1,4 +1,4 @@
-package edu.northeastern.pawpal;
+package edu.northeastern.pawpal.utils;
 
 import static edu.northeastern.pawpal.BuildConfig.MAPS_API_KEY;
 
@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class GooglePlacesUtils {
+public abstract class GooglePlacesUtils {
 
-    public URL buildURL(String baseURLStr, Location location, String keyword) throws MalformedURLException {
+    public static URL buildURL(String baseURLStr, Location location, String keyword) throws MalformedURLException {
         String locationStr = "location=" + location.getLatitude() + "%2C" + location.getLongitude();
         String radiusStr = "&radius=5000";
         String typeStr = "&keyword=" + keyword;
@@ -26,7 +26,7 @@ public class GooglePlacesUtils {
         return new URL(urlString);
     }
 
-    public String fetchData(URL requestURL) {
+    public static String fetchData(URL requestURL) {
 
         Handler responseHandler = new Handler();
         String response;
@@ -42,7 +42,7 @@ public class GooglePlacesUtils {
         return response;
     }
 
-    private HashMap<String, String> getPlace(JSONObject googlePlaceJson)
+    private static HashMap<String, String> getPlace(JSONObject googlePlaceJson)
     {
         HashMap<String, String> googlePlaceMap = new HashMap<>();
         String placeName = "--NA--";
@@ -67,7 +67,7 @@ public class GooglePlacesUtils {
         return googlePlaceMap;
     }
 
-    private List<HashMap<String, String>> getPlaces(JSONArray jsonArray)
+    private static List<HashMap<String, String>> getPlaces(JSONArray jsonArray)
     {
         int count = jsonArray.length();
         List<HashMap<String, String>> placeList = new ArrayList<>();
@@ -85,7 +85,7 @@ public class GooglePlacesUtils {
         return placeList;
     }
 
-    public List<HashMap<String, String>> parseData(String jsonData) {
+    public static List<HashMap<String, String>> parseData(String jsonData) {
         JSONArray jsonArray = null;
         JSONObject jsonObject;
 
