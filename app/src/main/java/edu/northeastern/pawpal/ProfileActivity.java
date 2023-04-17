@@ -168,6 +168,8 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
                 String birthday = dataSnapshot.child(uid).child("Birthday").getValue(String.class);
                 String breed = dataSnapshot.child(uid).child("Breed").getValue(String.class);
                 String status = dataSnapshot.child(uid).child("Status").getValue(String.class);
+
+
                 loadProfileImageFromFirebaseDatabase();
                 // 在 TextView 中显示对应节点的值
                 tv_user.setText(username);
@@ -176,6 +178,11 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
                 tv_birth.setText(birthday);
                 tv_lable.setText(breed);
                 tv_per.setText(status);
+
+                Intent intent = new Intent(ProfileActivity.this,
+                        ChatListActivity.class);
+                intent.putExtra("username", String.valueOf(username));
+                startActivity(intent);
             }
 
             @Override

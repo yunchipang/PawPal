@@ -1,5 +1,9 @@
 package edu.northeastern.pawpal;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -96,6 +100,12 @@ public class SignUpActivity extends AppCompatActivity {
                             usersRef.child(uid).setValue(userInfo);
 //                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
                             Toast.makeText(SignUpActivity.this,"You are successfully Registered, Please back to Sign in", Toast.LENGTH_LONG).show();
+                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
+                            Toast.makeText(SignUpActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
+//                            Intent intent = new Intent(SignUpActivity.this,
+//                                    ChatListActivity.class);
+//                            intent.putExtra("username", String.valueOf(user_name));
+//                            startActivity(intent);
                         }
                         else
                         {
