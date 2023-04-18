@@ -179,10 +179,7 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
                 tv_lable.setText(breed);
                 tv_per.setText(status);
 
-                Intent intent = new Intent(ProfileActivity.this,
-                        ChatListActivity.class);
-                intent.putExtra("username", String.valueOf(username));
-                startActivity(intent);
+
             }
 
             @Override

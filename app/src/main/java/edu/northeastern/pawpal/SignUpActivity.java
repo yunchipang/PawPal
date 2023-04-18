@@ -102,10 +102,12 @@ public class SignUpActivity extends AppCompatActivity {
                             Toast.makeText(SignUpActivity.this,"You are successfully Registered, Please back to Sign in", Toast.LENGTH_LONG).show();
                             sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
                             Toast.makeText(SignUpActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
-//                            Intent intent = new Intent(SignUpActivity.this,
-//                                    ChatListActivity.class);
-//                            intent.putExtra("username", String.valueOf(user_name));
-//                            startActivity(intent);
+                            Intent intent = new Intent(SignUpActivity.this,
+                                    ChatListActivity.class);
+                            intent.putExtra("username", String.valueOf(user_name));
+                            startActivity(intent);
+
+
                         }
                         else
                         {

@@ -1,6 +1,7 @@
 package edu.northeastern.pawpal;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +34,9 @@ public class ChatListActivity extends AppCompatActivity {
     RecyclerView userList;
     UserAdapter userAdapter;
 
+    FirebaseAuth mAuth;
+    String currentUserID;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -52,9 +57,20 @@ public class ChatListActivity extends AppCompatActivity {
         userAdapter = new UserAdapter(ChatListActivity.this,list,ChatListActivity.this, username);
         userList.setAdapter(userAdapter);
         list();
+        mAuth = FirebaseAuth.getInstance();
+        final FirebaseUser mFirebaseUser = mAuth.getCurrentUser();
+        if (mFirebaseUser != null) {
+            currentUserID = mFirebaseUser.getUid();
+        }
+
+        Intent intent2 = new Intent(ChatListActivity.this, ChatActivity.class);
+        intent2.putExtra("userName", String.valueOf(username));
+        //startActivity(intent2);
+
     }
 
     public void list (){
+
         reference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull  DataSnapshot snapshot, @Nullable  String previousChildName) {
