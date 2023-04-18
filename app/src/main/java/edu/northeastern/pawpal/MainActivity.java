@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intentNewPost);
                         return true; // TODO: navigate to Post new thing
 //                        startActivity(new Intent(MainActivity.this, AnimationStart.class));
-                        return true; // TODO: navigate to Post
+//                        return true; // TODO: navigate to Post
                     case R.id.navigation_nearby:
                         Intent intent = new Intent(MainActivity.this, NearbyActivity.class);
                         startActivity(intent);

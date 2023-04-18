@@ -17,6 +17,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 public class SignUpActivity extends AppCompatActivity {
     Button btn2_signup;
     EditText user_email, pass_word, user_name;
