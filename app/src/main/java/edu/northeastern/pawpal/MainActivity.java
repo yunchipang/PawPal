@@ -2,27 +2,35 @@ package edu.northeastern.pawpal;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    private ViewPager viewPager;
     private FirebaseDatabase mDatabase;
+    private ImageView imageView;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    FirebaseStorage storage = FirebaseStorage.getInstance();
+
 
     public static String userId;
     public static boolean is_searched_user = false;
@@ -31,13 +39,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //test loginActivity
-//        Button buttonlogtest = findViewById(R.id.login_test);
-//        buttonlogtest.setOnClickListener(view -> {
-//            Intent intent = new Intent(this, LoginActivity.class);
-//            startActivity(intent);
-//        });
 
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -49,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                         return true; // TODO: navigate to Home
                     case R.id.navigation_post:
-//                        startActivity(new Intent(MainActivity.this, AnimationStart.class));
-                        return true; // TODO: navigate to Post
+                        Intent intentNewPost = new Intent(MainActivity.this, addNewPost.class);
+                        startActivity(intentNewPost);
+                        return true; // TODO: navigate to Post new thing
                     case R.id.navigation_nearby:
                         Intent intent = new Intent(MainActivity.this, NearbyActivity.class);
                         startActivity(intent);
@@ -71,8 +73,26 @@ public class MainActivity extends AppCompatActivity {
 
     private void initiate() {
 
-        viewPager = findViewById(R.id.viewPager);
         mDatabase = FirebaseDatabase.getInstance();
+        imageView = findViewById(R.id.imageView4);
+        StorageReference imageRef = storage.getReference().child("1681637073298.jpg");
+        imageRef.getDownloadUrl()
+                .addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        String imageUrl = uri.toString();
+                        // 显示图像
+                        Glide.with(MainActivity.this)
+                                .load(imageUrl)
+                                .into(imageView);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // 处理获取图像 URL 失败的情况
+                    }
+                });
 
     }
 
@@ -106,11 +126,6 @@ public class MainActivity extends AppCompatActivity {
 //            int pos = savedInstanceState.
 //            viewPager.setCurrentItem(pos);
 //        }
-
-        Bundle extras = getIntent().getExtras();
-        if(extras != null && extras.containsKey("init_view_pager_item")) {
-            viewPager.setCurrentItem(extras.getInt("init_view_pager_item"));
-        }
     }
 
 // TODO: load profile image
@@ -130,17 +145,6 @@ public class MainActivity extends AppCompatActivity {
     public void onChange(String uid) {
         userId = uid;
         is_searched_user = true;
-        viewPager.setCurrentItem(4);
-    }
-
-    @Override
-    public void onBackPressed() {
-
-        if (viewPager.getCurrentItem() == 4) {
-            viewPager.setCurrentItem(0);
-            is_searched_user = false;
-        } else
-            super.onBackPressed();
     }
 
     @Override
@@ -159,10 +163,5 @@ public class MainActivity extends AppCompatActivity {
 
         Map<String, Object> map = new HashMap<>();
         map.put("online", status);
-
-        FirebaseFirestore.getInstance()
-                .collection("Users")
-                .document(user.getUid())
-                .update(map);
     }
 }

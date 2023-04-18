@@ -52,15 +52,16 @@ public class AnimationStart extends AppCompatActivity {
                         //onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
                         // boolean isFirstTime = onBoardingScreen.getBoolean("firstTime", true);
                         // TODO: insert login users
-//                if (user == null) {
-//                    startActivity(new Intent(SplashActivity.this, ReplacerActivity.class));
-//
-//                } else {
-//                    startActivity(new Intent(SplashActivity.this, ExploreActivity.class));
-//
-//                }
-                        //finish();
-                        startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+                if (user == null) {
+                    startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+
+                } else {
+                    startActivity(new Intent(AnimationStart.this, MainActivity.class));
+
+                }
+                        finish();
+                        //startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+                        //startActivity(new Intent(AnimationStart.this, MainActivity.class));
                     }
                 }, 2000);
             }
