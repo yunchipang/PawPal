@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,6 +24,8 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     FirebaseStorage storage = FirebaseStorage.getInstance();
 
+
     public static String userId;
     public static boolean is_searched_user = false;
 
@@ -47,13 +51,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //test loginActivity
-//        Button buttonlogtest = findViewById(R.id.login_test);
-//        buttonlogtest.setOnClickListener(view -> {
-//            Intent intent = new Intent(this, LoginActivity.class);
-//            startActivity(intent);
-//        });
 
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -68,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
                         Intent intentNewPost = new Intent(MainActivity.this, addNewPost.class);
                         startActivity(intentNewPost);
                         return true; // TODO: navigate to Post new thing
-//                        startActivity(new Intent(MainActivity.this, AnimationStart.class));
-//                        return true; // TODO: navigate to Post
                     case R.id.navigation_nearby:
                         Intent intent = new Intent(MainActivity.this, NearbyActivity.class);
                         startActivity(intent);

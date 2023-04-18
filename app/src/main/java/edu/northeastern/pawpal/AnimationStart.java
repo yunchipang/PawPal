@@ -49,9 +49,22 @@ public class AnimationStart extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        //onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
+                        // boolean isFirstTime = onBoardingScreen.getBoolean("firstTime", true);
+                        // TODO: insert login users
+                if (user == null) {
+                    startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+
+                } else {
+                    startActivity(new Intent(AnimationStart.this, MainActivity.class));
+
+                }
+//                        finish();
+                        //startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+                        //startActivity(new Intent(AnimationStart.this, MainActivity.class));
 
 //                if (user == null) {
-                    startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+//                    startActivity(new Intent(AnimationStart.this, LoginActivity.class));
 
 //                } else {
 //                    startActivity(new Intent(AnimationStart.this, MainActivity.class));
