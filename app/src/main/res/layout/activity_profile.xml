@@ -8,9 +8,12 @@
 
     <RelativeLayout
         android:id="@+id/rl_avatar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#B0C8E0EC">
+        android:background="#B0C8E0EC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
 
         <TextView
             android:id="@+id/tv_bg"
@@ -26,30 +29,53 @@
             android:orientation="vertical"
             android:paddingTop="10dp">
 
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv_avatar"-->
+            <!--                android:layout_width="@dimen/avatar_diameter"-->
+            <!--                android:layout_height="@dimen/avatar_diameter"-->
+            <!--                android:background="@drawable/circle_background"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginLeft="5dp"-->
+            <!--                android:layout_marginRight="5dp"-->
+            <!--                android:padding="3dp"-->
+            <!--                android:fitCenter="centerCrop"-->
+            <!--                android:src="@drawable/dog_app_profile_round" />-->
+
             <ImageView
                 android:id="@+id/iv_avatar"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerCrop"
+                android:shape="oval"
+                android:src="@drawable/dog_app_profile_round" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:padding="3dp"
-                android:src="@drawable/dog_app_profile_round" />
+                android:text="click image to change" />
         </LinearLayout>
 
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="412dp"
-        android:layout_height="46dp"
+        android:layout_width="410dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="528dp"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/rl_avatar"
-        tools:layout_editor_absoluteX="-1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -79,15 +105,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="412dp"
+        android:layout_width="0dp"
         android:layout_height="43dp"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
             android:layout_width="wrap_content"
@@ -117,20 +144,21 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="Birthday"
             android:textColor="@color/purple_200" />
@@ -139,7 +167,7 @@
             android:id="@+id/tv_birth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:text="1994/01/12"
             android:textColor="@color/purple_200" />
 
@@ -155,20 +183,22 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="Phone Number"
             android:textColor="@color/purple_200" />
@@ -177,7 +207,7 @@
             android:id="@+id/tv_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:text=" "
             android:textColor="@color/purple_200" />
 
@@ -192,28 +222,35 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="147dp"
         android:background="#9FEDF3F6"
         android:gravity="center"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="412dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="Breed"
             android:textColor="@color/purple_200" />
@@ -222,7 +259,7 @@
             android:id="@+id/tv_lable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:text=" "
             android:textColor="@color/purple_200" />
 
@@ -238,20 +275,21 @@
 
     <LinearLayout
         android:id="@+id/linearLayout7"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="What's up"
             android:textColor="@color/purple_200" />
@@ -260,7 +298,7 @@
             android:id="@+id/tv_per"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:text="puppy"
             android:textColor="@color/purple_200" />
 
