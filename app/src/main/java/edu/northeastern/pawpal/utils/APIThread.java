@@ -1,4 +1,4 @@
-package edu.northeastern.pawpal;
+package edu.northeastern.pawpal.utils;
 
 import android.os.Handler;
 

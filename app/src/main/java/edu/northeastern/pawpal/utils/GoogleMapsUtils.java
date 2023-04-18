@@ -1,11 +1,11 @@
-package edu.northeastern.pawpal;
+package edu.northeastern.pawpal.utils;
 
 import java.text.DecimalFormat;
 
 
-public class GoogleMapsUtils {
+public abstract class GoogleMapsUtils {
     
-    public String getDistanceInMiles(double currentLat, double currentLng, double destLat, double destLng) {
+    public static String getDistanceInMiles(double currentLat, double currentLng, double destLat, double destLng) {
         int earthRadius = 6371; // radius of the earth in km
         double dLat = Math.toRadians(destLat - currentLat);
         double dLng = Math.toRadians(destLng - currentLng);
