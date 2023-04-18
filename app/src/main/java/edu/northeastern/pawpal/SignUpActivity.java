@@ -1,8 +1,5 @@
 package edu.northeastern.pawpal;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -19,10 +16,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
-
-import bolts.Task;
 
 public class SignUpActivity extends AppCompatActivity {
     Button btn2_signup;

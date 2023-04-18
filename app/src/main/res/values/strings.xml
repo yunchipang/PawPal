@@ -28,7 +28,7 @@
 
     <!--    Google Places API   -->
     <string name="google_places_api_base_url">https://maps.googleapis.com/maps/api/place/nearbysearch/json?</string>
-    
+
     <!--    Sign up   -->
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="prompt_email">Email</string>

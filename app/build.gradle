@@ -59,4 +59,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.squareup.okhttp3:okhttp:4.1.0'
     implementation 'com.firebaseui:firebase-ui:0.6.0'
+
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
 }
