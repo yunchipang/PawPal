@@ -6,9 +6,9 @@ public class MessageModel {
     public MessageModel(){
 
     }
-    public MessageModel(String sender, String reciver, String message) {
+    public MessageModel(String sender, String receiver, String message) {
         this.sender = sender;
-        this.receiver = reciver;
+        this.receiver = receiver;
         this.message = message;
     }
 
@@ -20,17 +20,19 @@ public class MessageModel {
         this.sender = sender;
     }
 
-    public String getReciver() {
+    public String getReceiver() {
         return receiver;
     }
 
-    public void setReciver(String reciver) {
-        this.receiver = reciver;
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
     }
 
     public String getMessage() {
         return message;
     }
+
+
 
 //    public String getFrom() {
 //        return from;

@@ -21,7 +21,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     List<MessageModel> list;
 //    Activity activity;
 //    String userName;
-//    Boolean state;
+
     int send = 0, received = 1;
     FirebaseUser fuser;
 
@@ -36,9 +36,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         } else {
             this.list = list;
         }
-//        this.activity = activity;
-//        this.userName = userName;
-//        state = false;
+
+        //this.state = false;
     }
 
     @NonNull
@@ -48,11 +47,13 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         View view;
         if (viewType == send){
             view = LayoutInflater.from(context).inflate(R.layout.send_layout, parent, false);
-            return new MessageAdapter.ViewHolder(view);
+            //View sendView = view.findViewById(R.id.sendView);
+            return new MessageAdapter.ViewHolder(view, viewType);
         }
         else {
             view = LayoutInflater.from(context).inflate(R.layout.received_layout, parent, false);
-            return new MessageAdapter.ViewHolder(view);
+            //View receivedView = view.findViewById(R.id.receivedView);
+            return new MessageAdapter.ViewHolder(view, viewType);
         }
     }
 
@@ -60,6 +61,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     public void onBindViewHolder(@NonNull  ViewHolder holder, final int position) {
         MessageModel  chat = list.get(position);
         holder.textView.setText(chat.getMessage());
+
 
     }
 
@@ -73,15 +75,16 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         TextView textView;
 
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(View itemView, int viewType) {
             super(itemView);
-//            if(state == true){
-//                textView = itemView.findViewById(R.id.sendView);
-//            }
-//            else {
-//                textView = itemView.findViewById(R.id.receivedView);
-//            }
-            textView = itemView.findViewById(R.id.chatUserName);
+            if(viewType == send){
+                textView = itemView.findViewById(R.id.sendView);
+            }
+            else {
+                textView = itemView.findViewById(R.id.receivedView);
+            }
+
+            //textView = itemView.findViewById(R.id.chatUserName);
 
         }
     }

@@ -13,19 +13,25 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     Context context;
     List<String> list;
     Activity activity;
-    String userName;
+    String currentUser;
+
+    private DatabaseReference reference;
 
     public UserAdapter(Context context, List<String> list, Activity activity, String userName) {
         this.context = context;
         this.list = list;
         this.activity = activity;
-        this.userName = userName;
+        this.currentUser = userName;
+        reference = FirebaseDatabase.getInstance().getReference().child("users");
     }
 
     @NonNull
@@ -38,12 +44,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull  ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-        holder.textView.setText(list.get(position).toString());
-        holder.userID.setOnClickListener(new View.OnClickListener() {
+        String username = list.get(position);
+        holder.usernameTextView.setText(username);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, ChatActivity.class);
-                intent.putExtra("username", userName);
+                Intent intent = new Intent(context, ChatActivity.class);
+                intent.putExtra("username", currentUser);
                 intent.putExtra("othername", list.get(position).toString());
                 activity.startActivity(intent);
 
@@ -53,20 +60,20 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     }
 
     @Override
-    public int getItemCount() { //listedekilerin uzunluğu, sayısı
+    public int getItemCount() {
         return list.size();
     }
 
+
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textView;
-        LinearLayout userID;
+        TextView usernameTextView;
+       // LinearLayout userID;
 
-        public ViewHolder(View itemView) {
-            super(itemView);
-            textView = itemView.findViewById(R.id.userName);
-            userID = itemView.findViewById(R.id.userID);
-
+        public ViewHolder(View view) {
+            super(view);
+            usernameTextView = view.findViewById(R.id.userName);
         }
     }
 }
