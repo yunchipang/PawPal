@@ -40,6 +40,7 @@
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"

@@ -95,7 +95,7 @@ public class SignUpActivity extends AppCompatActivity {
                             userInfo.put("profile_URL", "");
                             usersRef.child(uid).setValue(userInfo);
 //                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
-                            Toast.makeText(SignUpActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this,"You are successfully Registered, Please back to Sign in", Toast.LENGTH_LONG).show();
                         }
                         else
                         {

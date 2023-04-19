@@ -1,316 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    >
 
-    <RelativeLayout
-        android:id="@+id/rl_avatar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#B0C8E0EC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProfileActivity">
 
-        <TextView
-            android:id="@+id/tv_bg"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_alignBottom="@+id/ll_anchor_left"
-            android:background="@color/white" />
-
-        <LinearLayout
-            android:id="@+id/ll_anchor_left"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/rl_avatar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="10dp">
-
-            <!--            <ImageView-->
-            <!--                android:id="@+id/iv_avatar"-->
-            <!--                android:layout_width="@dimen/avatar_diameter"-->
-            <!--                android:layout_height="@dimen/avatar_diameter"-->
-            <!--                android:background="@drawable/circle_background"-->
-            <!--                android:layout_gravity="center"-->
-            <!--                android:layout_marginLeft="5dp"-->
-            <!--                android:layout_marginRight="5dp"-->
-            <!--                android:padding="3dp"-->
-            <!--                android:fitCenter="centerCrop"-->
-            <!--                android:src="@drawable/dog_app_profile_round" />-->
-
-            <ImageView
-                android:id="@+id/iv_avatar"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:background="@drawable/circle_background"
-                android:scaleType="centerCrop"
-                android:shape="oval"
-                android:src="@drawable/dog_app_profile_round" />
+            android:background="#B0C8E0EC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@+id/ll_anchor_left"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_anchor_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <!--            <ImageView-->
+                <!--                android:id="@+id/iv_avatar"-->
+                <!--                android:layout_width="@dimen/avatar_diameter"-->
+                <!--                android:layout_height="@dimen/avatar_diameter"-->
+                <!--                android:background="@drawable/circle_background"-->
+                <!--                android:layout_gravity="center"-->
+                <!--                android:layout_marginLeft="5dp"-->
+                <!--                android:layout_marginRight="5dp"-->
+                <!--                android:padding="3dp"-->
+                <!--                android:fitCenter="centerCrop"-->
+                <!--                android:src="@drawable/dog_app_profile_round" />-->
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:scaleType="centerCrop"
+                    android:shape="oval"
+                    android:src="@drawable/dog_app_profile_round" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="click image to change" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="528dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:text="click image to change" />
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Name"
+                android:textColor="@color/purple_200" />
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="Pawpal"
+                android:textColor="@color/purple_200" />
+
+            <ImageButton
+                android:id="@+id/btn_user"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_2" />
+
         </LinearLayout>
 
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="410dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="528dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:text="Name"
-            android:textColor="@color/purple_200" />
-
-        <TextView
-            android:id="@+id/tv_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="Pawpal"
-            android:textColor="@color/purple_200" />
-
-        <ImageButton
-            android:id="@+id/btn_user"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="centerInside"
-            android:src="@drawable/right_2" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:text="Gender"
-            android:textColor="@color/purple_200" />
-
-        <TextView
-            android:id="@+id/tv_sex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="girl"
-            android:textColor="@color/purple_200" />
-
-        <ImageButton
-            android:id="@+id/btn_sex"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="centerInside"
-            android:src="@drawable/right_2" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_weight="1"
-            android:text="Birthday"
-            android:textColor="@color/purple_200" />
+            android:layout_height="43dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <TextView
-            android:id="@+id/tv_birth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text="1994/01/12"
-            android:textColor="@color/purple_200" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Gender"
+                android:textColor="@color/purple_200" />
 
-        <ImageButton
-            android:id="@+id/btn_birth"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="centerInside"
-            android:src="@drawable/right_2" />
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="girl"
+                android:textColor="@color/purple_200" />
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btn_sex"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_2" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        </LinearLayout>
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_weight="1"
-            android:text="Phone Number"
-            android:textColor="@color/purple_200" />
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <TextView
-            android:id="@+id/tv_phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text=" "
-            android:textColor="@color/purple_200" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:text="Birthday"
+                android:textColor="@color/purple_200" />
 
-        <ImageButton
-            android:id="@+id/btn_phone"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="centerInside"
-            android:src="@drawable/right_2" />
+            <TextView
+                android:id="@+id/tv_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="1994/01/12"
+                android:textColor="@color/purple_200" />
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btn_birth"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_2" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="147dp"
-        android:background="#9FEDF3F6"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_weight="1"
-            android:text="Breed"
-            android:textColor="@color/purple_200" />
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <TextView
-            android:id="@+id/tv_lable"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text=" "
-            android:textColor="@color/purple_200" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:text="Phone Number"
+                android:textColor="@color/purple_200" />
 
-        <ImageButton
-            android:id="@+id/btn_lable"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="centerInside"
-            android:src="@drawable/right_2" />
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text=" "
+                android:textColor="@color/purple_200" />
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btn_phone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_2" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+        </LinearLayout>
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_weight="1"
-            android:text="What's up"
-            android:textColor="@color/purple_200" />
+            android:layout_height="0dp"
+            android:layout_marginBottom="147dp"
+            android:background="#9FEDF3F6"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_per"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text="puppy"
-            android:textColor="@color/purple_200" />
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
-        <ImageButton
-            android:id="@+id/btn_per"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="centerInside"
-            android:src="@drawable/right_2" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:text="Breed"
+                android:textColor="@color/purple_200" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text=" "
+                android:textColor="@color/purple_200" />
+
+            <ImageButton
+                android:id="@+id/btn_lable"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:text="What's up"
+                android:textColor="@color/purple_200" />
+
+            <TextView
+                android:id="@+id/tv_per"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="puppy"
+                android:textColor="@color/purple_200" />
+
+            <ImageButton
+                android:id="@+id/btn_per"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/signOutbtn"
+                android:layout_width="139dp"
+                android:layout_height="51dp"
+                android:backgroundTint="#B9C9E0EC"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_2"
+                android:text="Sign OUT" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

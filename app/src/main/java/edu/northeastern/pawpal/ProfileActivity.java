@@ -95,6 +95,7 @@ public class ProfileActivity extends AppCompatActivity {
     private String input_breed;
     private String input_status;
     private Bitmap mCirclePhoto;
+    private Button signOutbtn;
     //make a map to store profile data in realtime database
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -124,6 +125,7 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
         btn_sex=findViewById(R.id.btn_sex);
         tv_birth=findViewById(R.id.tv_birth);
         btn_birth=findViewById(R.id.btn_birth);
+        signOutbtn = findViewById(R.id.signOutbtn);
         Listener listener=new Listener();
         btn_user.setOnClickListener(listener);
         btn_phone.setOnClickListener(listener);
@@ -131,6 +133,17 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
         btn_per.setOnClickListener(listener);
         btn_sex.setOnClickListener(listener);
         btn_birth.setOnClickListener(listener);
+
+        signOutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         mProfileImage = findViewById(R.id.iv_avatar);
 
@@ -377,8 +390,8 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
         @Override
         public void onClick(View view) {
 //            signOutbtn.setOnClickListener(v -> {
-//                auth.signOut();
-//                startActivity(new Intent(getActivity(), ReplacerActivity.class));
+//                mAuth.signOut();
+//                startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
 //            });
             switch(view.getId()){
                 case R.id.btn_user:
