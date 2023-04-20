@@ -75,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         return true;
                     case R.id.navigation_inbox:
-                        return true; // TODO: navigate to Inbox
+                        Intent intent1 = new Intent(MainActivity.this, ChatListActivity.class);
+                        startActivity(intent1);
+                        return true;
                     case R.id.navigation_profile:
                         Intent intentP = new Intent(MainActivity.this, ProfileActivity.class);
                         startActivity(intentP);

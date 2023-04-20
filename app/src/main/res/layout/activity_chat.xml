@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:id="@+id/ust"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back"
+            android:id="@+id/backImage"></ImageView>
+
+        <TextView
+            android:id="@+id/chatUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="6"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_above="@id/alt"
+        android:id="@+id/chatRecyclerView"
+        android:background="@drawable/chat_wallpaper"
+        android:layout_below="@id/ust"
+        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:id="@+id/alt"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/chatEditText"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="5"
+            android:hint="Type a message ..."
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="16dp"
+            android:textStyle="normal"></EditText>
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="52dp"
+            android:background="@drawable/send_icon"
+            android:layout_marginRight="12dp"
+            android:id="@+id/sendImage"
+            android:layout_weight="1"></ImageView>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
