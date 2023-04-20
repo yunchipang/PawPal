@@ -107,6 +107,9 @@ public class SignUpActivity extends AppCompatActivity {
                             intent.putExtra("username", String.valueOf(user_name));
                             startActivity(intent);
 
+//                            Intent intent2 = new Intent(SignUpActivity.this, ChatListActivity.class);
+//                            intent2.putExtra("username", String.valueOf(user_name));
+
 
                         }
                         else

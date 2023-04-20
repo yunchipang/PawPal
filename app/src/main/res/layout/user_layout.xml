@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:id="@+id/userID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/background_layout"
     android:clickable="true">
 
     <ImageView
+        android:id="@+id/userIcon"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/user_icon"
         android:layout_marginLeft="11dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/userName"
-        android:layout_width="296dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:text="Sophia"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/userIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/userIcon"
+        app:layout_constraintBottom_toBottomOf="@id/userIcon"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/receivedView"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/received_circle_drawable"
+        android:padding="1dp"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

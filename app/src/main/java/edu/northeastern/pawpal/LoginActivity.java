@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     Intent intent2 = new Intent(LoginActivity.this, ChatActivity.class);
                     intent2.putExtra("username", String.valueOf(user_name));
-//                    //startActivity(intent2);
+                    //startActivity(intent2);
 
                 }
                 else
