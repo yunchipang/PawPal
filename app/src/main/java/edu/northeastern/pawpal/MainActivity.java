@@ -4,30 +4,20 @@ import static android.content.ContentValues.TAG;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.view.View;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
+
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
+
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -37,19 +27,11 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
-import com.google.firebase.database.MutableData;
-import com.google.firebase.database.Transaction;
+
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
-import com.google.firebase.firestore.FirebaseFirestore;
 
 
 import java.util.ArrayList;
@@ -90,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        return true; // TODO: navigate to Home
+                        return true;
                     case R.id.navigation_post:
                         Intent intentNewPost = new Intent(MainActivity.this, addNewPost.class);
                         startActivity(intentNewPost);
-                        return true; // TODO: navigate to Post new thing
+                        return true;
                     case R.id.navigation_nearby:
                         Intent intent = new Intent(MainActivity.this, NearbyActivity.class);
                         startActivity(intent);
@@ -106,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_profile:
                         Intent intentP = new Intent(MainActivity.this, ProfileActivity.class);
                         startActivity(intentP);
-                        return true; // TODO: ZL-----navigate to Profile
+                        return true;
                 }
                 return false;
             }
