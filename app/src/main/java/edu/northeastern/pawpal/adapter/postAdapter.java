@@ -56,7 +56,7 @@ public class postAdapter extends RecyclerView.Adapter<postViewHolder>{
         if (likeList != null) {
             int count = likeList.size();
             if (count == 0) {
-                holder.likesTextView.setText("0 Like");
+                holder.likesTextView.setText(count + "Like");
             } else if (count == 1) {
                 holder.likesTextView.setText(count + " Like");
             } else {

@@ -126,7 +126,9 @@ public class MainActivity extends AppCompatActivity {
                     likeList.add(user.getUid()); // like
                 }
                 Map<String, Object> map = new HashMap<>();
+
                 map.put("likes", likeList);
+                System.out.println("test map" + map.toString());
                 reference.updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
@@ -171,8 +173,8 @@ public class MainActivity extends AppCompatActivity {
                     long timestamp = postSnapshot.child("timestamp").getValue(Long.class);
 
                     List<String> likeCount = new ArrayList<>();
-                    for (DataSnapshot likeSnapshot : postSnapshot.child("likeCount").getChildren()) {
-                        likeCount.add(likeSnapshot.getKey());
+                    for (DataSnapshot likeSnapshot : postSnapshot.child("likes").getChildren()) {
+                        likeCount.add(likeSnapshot.getValue(String.class));
                     }
                     postList.add(0, new singlePost(username, postId, description,imageUrl, profileUrl, likeCount, uid));
                 }
