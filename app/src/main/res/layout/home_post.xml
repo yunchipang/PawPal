@@ -17,8 +17,8 @@
         android:src="@drawable/baseline_account_circle_24" />
 
     <LinearLayout
-        android:layout_width="106dp"
-        android:layout_height="57dp"
+        android:layout_width="126dp"
+        android:layout_height="58dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:layout_toEndOf="@id/profileImage"
@@ -46,17 +46,29 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="178dp"
-        android:layout_height="232dp"
+        android:layout_width="199dp"
+        android:layout_height="231dp"
         android:layout_below="@id/profileImage"
         android:layout_marginTop="-5dp"
         android:scaleType="centerCrop" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="179dp"
+    <TextView
+        android:id="@+id/descTv"
+        android:layout_width="198dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="15dp"
+        android:text="description here..."
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="198dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/descTv"
         android:orientation="horizontal">
 
         <CheckBox
@@ -64,13 +76,21 @@
             android:layout_width="29dp"
             android:layout_height="match_parent"
             android:layout_margin="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
             android:button="@drawable/heart_check" />
 
         <TextView
-            android:id="@+id/likeCountTv"
+            android:id="@+id/likeCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
             android:paddingEnd="8dp"
             android:text="100 likes"
             android:textColor="@color/black"
@@ -90,26 +110,6 @@
 
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/descTv"
-        android:layout_width="178dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayout"
-        android:paddingStart="10dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="15dp"
-        android:text="description here..."
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/commentTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="View all comment"
-        android:textColor ="#00FF4343"
-        android:visibility="gone" />
 
 
 </RelativeLayout>

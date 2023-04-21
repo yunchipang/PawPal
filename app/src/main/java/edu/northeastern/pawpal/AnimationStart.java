@@ -59,18 +59,9 @@ public class AnimationStart extends AppCompatActivity {
                     startActivity(new Intent(AnimationStart.this, MainActivity.class));
 
                 }
-//                        finish();
-                        //startActivity(new Intent(AnimationStart.this, LoginActivity.class));
-                        //startActivity(new Intent(AnimationStart.this, MainActivity.class));
-
-//                if (user == null) {
-//                    startActivity(new Intent(AnimationStart.this, LoginActivity.class));
-
-//                } else {
-//                    startActivity(new Intent(AnimationStart.this, MainActivity.class));
-
-//                }
                         finish();
+//                        startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+//                        startActivity(new Intent(AnimationStart.this, LoginActivity.class));
                     }
                 }, 2000);
             }
