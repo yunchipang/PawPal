@@ -12,7 +12,7 @@
         android:layout_height="431dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewContent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewContent" />
 
     <Button
         android:id="@+id/button3"
@@ -42,13 +42,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/textViewContent"
         android:layout_width="349dp"
         android:layout_height="72dp"
         android:layout_marginStart="31dp"
         android:layout_marginEnd="31dp"
-        android:text="Say Something"
+        android:hint="Say something here"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
