@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 Map<String, Object> map = new HashMap<>();
 
                 map.put("likes", likeList);
-                System.out.println("test map" + map.toString());
+
                 reference.updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
