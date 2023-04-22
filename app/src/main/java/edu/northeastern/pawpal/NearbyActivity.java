@@ -46,9 +46,6 @@ public class NearbyActivity extends AppCompatActivity implements
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean permissionDenied = false;
     private Location mLastLocation;
-    private GooglePlacesUtils gpUtils;
-    private GoogleMapsUtils gmUtils;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
