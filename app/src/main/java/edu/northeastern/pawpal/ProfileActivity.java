@@ -38,7 +38,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.bumptech.glide.Glide;
 
-import com.google.android.gms.fido.fido2.api.common.RequestOptions;
+//import com.google.android.gms.fido.fido2.api.common.RequestOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;

@@ -50,7 +50,7 @@ public class AnimationStart extends AppCompatActivity {
                     @Override
                     public void run() {
 
-//                if (user == null) {
+                if (user == null) {
                     startActivity(new Intent(AnimationStart.this, LoginActivity.class));
 
 //                } else {
@@ -58,6 +58,8 @@ public class AnimationStart extends AppCompatActivity {
 
 //                }
                         finish();
+//                        startActivity(new Intent(AnimationStart.this, LoginActivity.class));
+//                        startActivity(new Intent(AnimationStart.this, LoginActivity.class));
                     }
                 }, 2000);
             }

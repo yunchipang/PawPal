@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="edu.northeastern.pawpal">
 
+
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
 
@@ -36,11 +37,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainPostAdapter"
-            android:exported="false"
-            tools:ignore="MissingClass" />
-
         <activity
             android:name=".ProfileActivity"
             android:configChanges="orientation|screenSize"
