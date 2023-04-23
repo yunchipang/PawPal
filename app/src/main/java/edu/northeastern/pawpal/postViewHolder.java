@@ -24,7 +24,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.net.HttpCookie;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import edu.northeastern.pawpal.adapter.postAdapter;
 import edu.northeastern.pawpal.model.singlePost;
@@ -40,6 +43,7 @@ public class postViewHolder extends RecyclerView.ViewHolder {
     private int likeCount;
     DatabaseReference postRef = FirebaseDatabase.getInstance().getReference().child("posts");
     private postAdapter.OnPressed onPressed;
+    public TextView timestampTextView;
 
 
 //    public void setOnPressed(postAdapter.OnPressed onPressed) {
@@ -54,12 +58,23 @@ public class postViewHolder extends RecyclerView.ViewHolder {
         profileImageView = itemView.findViewById(R.id.profileImage);
         likesTextView = itemView.findViewById(R.id.likeCount);
         likeCheckBox = itemView.findViewById(R.id.likeBtn);
+        timestampTextView = itemView.findViewById(R.id.timeTv);
         this.onPressed = onPressed;
     }
 
     public void bind(singlePost post) {
         nameTextView.setText(post.getName());
         descriptionTextView.setText(post.getDescription());
+
+        long timestamp = post.getTimestamp();
+        System.out.println("Timestamp is: " + timestamp);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+        dateFormat.setTimeZone(TimeZone.getDefault());
+        String dateString = dateFormat.format(new Date(timestamp));
+        timestampTextView.setText(dateString);
+
+
+
         String imageUrl = post.getPostImageUrl();
         Glide.with(postImageView)
                 .load(imageUrl)

@@ -230,9 +230,8 @@ public class addNewPost extends AppCompatActivity {
 //                List<String> likeCount = new ArrayList<>(0);
                 List<String> likeCount = new ArrayList<>();
                 String postId = UUID.randomUUID().toString();
-                singlePost singlePost = new singlePost(username, postId, comment, postUrl, profileUrl, likeCount, uid);
                 long timestamp = System.currentTimeMillis();
-                singlePost.setTimestamp(timestamp);
+                singlePost singlePost = new singlePost(username, postId, comment, postUrl, profileUrl, likeCount, uid, timestamp);
 //        Log.d("test singlePost", singlePost.toString());
                 postsRef.child(singlePost.getPostId()).setValue(singlePost);
 //                postsRef.push().setValue(singlePost);

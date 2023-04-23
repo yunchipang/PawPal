@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                     for (DataSnapshot likeSnapshot : postSnapshot.child("likes").getChildren()) {
                         likeCount.add(likeSnapshot.getValue(String.class));
                     }
-                    postList.add(0, new singlePost(username, postId, description,imageUrl, profileUrl, likeCount, uid));
+                    postList.add(0, new singlePost(username, postId, description,imageUrl, profileUrl, likeCount, uid, timestamp));
                 }
 //                postAdapter adapter = new postAdapter(MainActivity.this, postList);
                 adapter.notifyItemInserted(0);
