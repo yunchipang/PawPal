@@ -65,7 +65,6 @@ public class ChatListActivity extends AppCompatActivity {
         if (mFirebaseUser != null) {
             uid = mFirebaseUser.getUid();
         }
-        //username = dataSnapshot.child(uid).child("Username").getValue(String.class);
 
         Intent intent2 = new Intent(ChatListActivity.this, ChatActivity.class);
         intent2.putExtra("userName", String.valueOf(username));
@@ -79,12 +78,10 @@ public class ChatListActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull  DataSnapshot snapshot, @Nullable  String previousChildName) {
                 String key = snapshot.getKey();
-                Log.d("TAG:669", "onChildAdded: "+snapshot.toString());
+
                 if(!key.equals(username)){
                     DataSnapshot usernameSnapshot = snapshot.child("Username"); //TODO: new
-                    Log.d("TAG:730", "onChildAdded: "+ usernameSnapshot);
                     String name = snapshot.child("Username").getValue(String.class);
-                    Log.d("TAG:770", "onChildAdded: "+ name);
                     list.add(name);
                     userAdapter.notifyDataSetChanged();;
                 }

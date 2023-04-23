@@ -148,9 +148,9 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
         mProfileImage = findViewById(R.id.iv_avatar);
 
         String status = usersRef.child(uid).child("profile_URL").toString();
-        if(status == ""){
-        initiate();
-        }
+//        if(status == ""){
+//        initiate();
+//        }
         mProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -377,6 +377,14 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
                 Toast.makeText(ProfileActivity.this, "Failed to load profile image", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // 清除Glide请求
+         if (!isFinishing()) {
+                Glide.with(this).clear(mProfileImage);
+            }
     }
 
     public static Drawable getCircleBackground() {

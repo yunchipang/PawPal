@@ -16,9 +16,11 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
+//part of code learn from: https://stackoverflow.com/questions/44968837/why-i-can-not-read-and-display-data-from-firebase-real-time-database
+
+public class MessageAdapter extends RecyclerView.Adapter {
     Context context;
-    List<MessageModel> list;
+    ArrayList<MessageModel> list;
 //    Activity activity;
 //    String userName;
 
@@ -28,7 +30,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     public MessageAdapter() {
     }
 
-    public MessageAdapter(Context context, List<MessageModel> list) {
+    public MessageAdapter(Context context, ArrayList<MessageModel> list) {
         this.context = context;
         //this.list = list;
         if (list == null) {
@@ -40,29 +42,61 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         //this.state = false;
     }
 
-    @NonNull
 
+    @NonNull
     @Override
-    public MessageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view;
-        if (viewType == send){
-            view = LayoutInflater.from(context).inflate(R.layout.send_layout, parent, false);
-            //View sendView = view.findViewById(R.id.sendView);
-            return new MessageAdapter.ViewHolder(view, viewType);
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        if(viewType==send)
+        {
+            View view= LayoutInflater.from(context).inflate(R.layout.send_layout,parent,false);
+            return new SenderViewHolder(view);
         }
-        else {
-            view = LayoutInflater.from(context).inflate(R.layout.received_layout, parent, false);
-            //View receivedView = view.findViewById(R.id.receivedView);
-            return new MessageAdapter.ViewHolder(view, viewType);
+        else
+        {
+            View view= LayoutInflater.from(context).inflate(R.layout.received_layout,parent,false);
+            return new RecieverViewHolder(view);
         }
     }
 
     @Override
-    public void onBindViewHolder(@NonNull  ViewHolder holder, final int position) {
-        MessageModel  chat = list.get(position);
-        holder.textView.setText(chat.getMessage());
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+        MessageModel messages= list.get(position);
+        if(holder.getClass()==SenderViewHolder.class)
+        {
+            SenderViewHolder viewHolder=(SenderViewHolder)holder;
+            viewHolder.textViewmessaage.setText(messages.getMessage());
+
+        }
+        else
+        {
+            RecieverViewHolder viewHolder=(RecieverViewHolder)holder;
+            viewHolder.textViewmessaage.setText(messages.getMessage());
+
+        }
 
 
+
+
+
+
+
+
+    }
+
+
+    @Override
+    public int getItemViewType(int position) {
+        MessageModel messages = list.get(position);
+        if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals(messages.getSenderId()))
+
+        {
+            return send;
+        }
+        else
+        {
+            return received;
+        }
     }
 
     @Override
@@ -70,41 +104,40 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        TextView textView;
 
 
-        public ViewHolder(View itemView, int viewType) {
+
+
+
+
+
+    class SenderViewHolder extends RecyclerView.ViewHolder
+    {
+
+        TextView textViewmessaage;
+
+
+
+        public SenderViewHolder(@NonNull View itemView) {
             super(itemView);
-            if(viewType == send){
-                textView = itemView.findViewById(R.id.sendView);
-            }
-            else {
-                textView = itemView.findViewById(R.id.receivedView);
-            }
-
-            //textView = itemView.findViewById(R.id.chatUserName);
-
+            textViewmessaage=itemView.findViewById(R.id.sendView);
         }
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        fuser= FirebaseAuth.getInstance().getCurrentUser();
-        if (list.get(position).getSender().equals(fuser.getUid())){
-            return send;
+    class RecieverViewHolder extends RecyclerView.ViewHolder
+    {
+
+        TextView textViewmessaage;
+
+
+
+        public RecieverViewHolder(@NonNull View itemView) {
+            super(itemView);
+            textViewmessaage=itemView.findViewById(R.id.receivedView);
         }
-        else {
-            return received;
-        }
-//        if(list.get(position).getFrom().equals(userName)){
-//            state = true;
-//            return send;
-//        }
-//        else {
-//            state = false;
-//            return received;
-//        }
     }
+
+
+
+
 }

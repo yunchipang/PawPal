@@ -96,19 +96,21 @@ public class SignUpActivity extends AppCompatActivity {
                             userInfo.put("Phone", "");
                             userInfo.put("Breed", "");
                             userInfo.put("Status", "");
-                            userInfo.put("profile_URL", "");
+                            userInfo.put("profile_URL", "https://firebasestorage.googleapis.com/v0/b/pawpal-383322.appspot.com/o/profile_images%2Fc10dacd6-cdba-491d-98de-9f3c5701293e.jpg?alt=media&token=5bdf19cf-9bfb-41f6-971b-71525331ad69");
                             usersRef.child(uid).setValue(userInfo);
 //                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
-                            Toast.makeText(SignUpActivity.this,"You are successfully Registered, Please back to Sign in", Toast.LENGTH_LONG).show();
-                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
-                            Toast.makeText(SignUpActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this,"You are successfully Registered, Please Sign in", Toast.LENGTH_LONG).show();
+//                            sharedPrefs.edit().putString("username", String.valueOf(user_name)).apply();
+ //                           Toast.makeText(SignUpActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
+
+
                             Intent intent = new Intent(SignUpActivity.this,
-                                    ChatListActivity.class);
+                                    LoginActivity.class);
                             intent.putExtra("username", String.valueOf(user_name));
                             startActivity(intent);
 
-//                            Intent intent2 = new Intent(SignUpActivity.this, ChatListActivity.class);
-//                            intent2.putExtra("username", String.valueOf(user_name));
+                            Intent intent2 = new Intent(SignUpActivity.this, ChatListActivity.class);
+                            intent2.putExtra("username", String.valueOf(user_name));
 
 
                         }
