@@ -1,60 +1,33 @@
 package edu.northeastern.pawpal;
 
 public class MessageModel {
-    private String sender, receiver, message;
+    private String message, senderId;
 
     public MessageModel(){
 
     }
-    public MessageModel(String sender, String receiver, String message) {
-        this.sender = sender;
-        this.receiver = receiver;
+    public MessageModel(String message, String senderId) {
         this.message = message;
+        this.senderId = senderId;
+//        this.receiver = receiver;
+//        this.message = message;
     }
 
-    public String getSender() {
-        return sender;
-    }
-
-    public void setSender(String sender) {
-        this.sender = sender;
-    }
-
-    public String getReceiver() {
-        return receiver;
-    }
-
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
-    }
 
     public String getMessage() {
         return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
+    public String getSenderId() {
+        return senderId;
+    }
 
-//    public String getFrom() {
-//        return from;
-//    }
-//
-//    public void setFrom(String from) {
-//        this.from = from;
-//    }
-//
-//    public String getText() {
-//        return text;
-//    }
-//
-//    public void setText(String text) {
-//        this.text = text;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "MessageModel{" +
-//                "from='" + from + '\'' +
-//                ", text='" + text + '\'' +
-//                '}';
-//    }
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
+    }
+
 }
