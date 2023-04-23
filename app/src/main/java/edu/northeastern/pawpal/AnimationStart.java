@@ -53,10 +53,10 @@ public class AnimationStart extends AppCompatActivity {
                 if (user == null) {
                     startActivity(new Intent(AnimationStart.this, LoginActivity.class));
 
-//                } else {
-//                    startActivity(new Intent(AnimationStart.this, MainActivity.class));
+                } else {
+                    startActivity(new Intent(AnimationStart.this, MainActivity.class));
 
-//                }
+                }
                         finish();
 //                        startActivity(new Intent(AnimationStart.this, LoginActivity.class));
 //                        startActivity(new Intent(AnimationStart.this, LoginActivity.class));

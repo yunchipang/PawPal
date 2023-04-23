@@ -364,7 +364,7 @@ FirebaseStorage storage = FirebaseStorage.getInstance();
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String profileImageUrl = dataSnapshot.getValue(String.class);
                 if (profileImageUrl != null) {
-                    Glide.with(ProfileActivity.this)
+                    Glide.with(getApplicationContext())
                             .load(profileImageUrl)
                             .circleCrop()
                             .into(mProfileImage);
