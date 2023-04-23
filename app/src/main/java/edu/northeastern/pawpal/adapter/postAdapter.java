@@ -75,6 +75,7 @@ public class postAdapter extends RecyclerView.Adapter<postViewHolder>{
                 postList.get(position).getLikeCount(),
                 postList.get(position).getPostImageUrl()
         );
+
     }
 
     public void OnPressed(OnPressed onPressed) {

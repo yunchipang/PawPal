@@ -24,7 +24,7 @@ public class singlePost {
     public singlePost() {
     }
 
-    public singlePost(String name, String postId, String description, String imageUrl, String profileImageUrl, List<String> likeCount, String uid) {
+    public singlePost(String name, String postId, String description, String imageUrl, String profileImageUrl, List<String> likeCount, String uid, long timestamp) {
         this.postId = postId;
         this.name = name;
         this.description = description;
@@ -32,6 +32,7 @@ public class singlePost {
         this.profileImageUrl = profileImageUrl;
         this.likeCount = likeCount;
         this.uid = uid;
+        this.timestamp = timestamp;
     }
 
     public  String getPostId() {
